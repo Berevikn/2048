@@ -8,6 +8,9 @@ Square::Square(sf::Vector2f size) {
     (*mSquare).setTexture(mTexture);
     (*mSquare).setTextureRect(sf::IntRect(0, 0, (*mSize).x, (*mSize).y));
     *mLevel = 1;
+    if (rand() % 2) {
+        levelUp();
+    }
 }
 
 void Square::setPosition(sf::Vector2f position) {

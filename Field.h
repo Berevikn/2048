@@ -50,8 +50,9 @@ private:
     int* mSquaresCountMoved = new int;
     Square** mSquares = new Square*[*mSquareOfSideCount];
     bool** mIsEmpty = new bool*[*mSquareOfSideCount];
-    bool* mIsWin = new bool(false);
-    bool* mIsLose = new bool(false);
+    bool* mIsWin = new bool;
+    bool* mIsLose = new bool;
+    bool* mIsMoved = new bool;
 };
 
 

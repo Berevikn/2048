@@ -39,11 +39,11 @@ int main() {
                     menu.turnStop();
                 }
                 if (!menu.isStop()) {
+                    if (event.key.code == Keyboard::Enter) {
+                        myField.init();
+                    }
                     if (myField.isLose()) {
                         std::cout << "LOH" << std::endl;
-                        if (event.key.code == Keyboard::Enter) {
-                            myField.init();
-                        }
                     } else {
                         if (event.key.code == Keyboard::Down) {
                             myField.moveDown();
