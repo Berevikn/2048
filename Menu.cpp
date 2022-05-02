@@ -46,7 +46,6 @@ void Menu::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 //        target.draw(*mSettingsMenu);
     } else {
         target.draw(*mButtonStart);
-        target.draw(*mButtonResume);
 //        target.draw(*mButtonSettings);
         target.draw(*mButtonQuit);
     }
@@ -54,7 +53,6 @@ void Menu::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 
 Menu::~Menu() {
     delete mButtonStart;
-    delete mButtonResume;
     delete mButtonQuit;
 //    delete mButtonSettings;
     delete mTextureStart;
@@ -68,13 +66,6 @@ bool Menu::clickOnButtonStart(sf::Vector2i mousePosition) {
             ((float)mousePosition.x < mButtonStart->getPosition().x + mButtonStart->getSize().x) &&
             ((float)mousePosition.y > mButtonStart->getPosition().y) &&
             ((float)mousePosition.y < mButtonStart->getPosition().y + mButtonStart->getSize().y);
-}
-
-bool Menu::clickOnButtonResume(sf::Vector2i mousePosition) {
-    return ((float)mousePosition.x > mButtonResume->getPosition().x) &&
-           ((float)mousePosition.x < mButtonResume->getPosition().x + mButtonResume->getSize().x) &&
-           ((float)mousePosition.y > mButtonResume->getPosition().y) &&
-           ((float)mousePosition.y < mButtonResume->getPosition().y + mButtonResume->getSize().y);
 }
 
 //bool Menu::clickOnButtonSettings(sf::Vector2i mousePosition) {
